@@ -23,6 +23,7 @@
   "homepage": "https://github.com/LuiggiAntonni/testeLoginJwt#readme",
   "dependencies": {
     "express": "^4.17.3",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
   }
 }
