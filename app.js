@@ -1,7 +1,8 @@
 const express =  require('express');
 const app = express();
 const morgan = require('morgan');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const mysql = require('./mysql').pool;
 
 const rotaMain = require('./routes/main');
 
