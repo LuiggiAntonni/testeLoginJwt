@@ -2,13 +2,13 @@ const express = require('express');
 const router = express.Router();
 const login = require('../middleware/login');
 
-router.get('/', (req, res, next) => {
+router.get('/', login.obrigatorio,(req, res, next) => {
     res.status(200).send({
         mensagem: 'Usando o Get na rota main'
     })
 });
 
-router.post('/', (req, res, next) => {
+router.post('/', login.obrigatorio,(req, res, next) => {
     res.status(201).send({
         mensagem: 'Usando o POST na rota main'
     })
