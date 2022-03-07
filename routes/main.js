@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const login = require('../middleware/login');
 
 router.get('/', (req, res, next) => {
     res.status(200).send({
@@ -13,7 +14,8 @@ router.post('/', (req, res, next) => {
     })
 });
 
-router.get('/:id_produto', (req, res, next) => {
+router.get('/:id_produto', login.obrigatorio,(req, res, next) => {
+    console.log(req.usuario)
     const id = req.params.id_produto
     res.status(200).send({
         id: id
